@@ -53,7 +53,7 @@
 
 ## Microcontroller model 4 ตัว
 
-###- IS61LV6416-10KLI-TR 
+### - IS61LV6416-10KLI-TR 
 
 •	memorytype : SRAM  
 
@@ -65,7 +65,7 @@
 
 https://www.ozdisan.com/entegre-devreler-ics/hafiza-entegreleri/hafiza-entegreleri/IS61LV6416-10KLI-TR  
 
-###- AT28C256-15PU  
+### - AT28C256-15PU  
 
 •	memorytype : EEPROM   
 
