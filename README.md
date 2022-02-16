@@ -54,31 +54,51 @@
 ## Microcontroller model 4 ตัว
 
 ###- IS61LV6416-10KLI-TR 
-•	memorytype : SRAM   
+
+•	memorytype : SRAM  
+
 •	speed : 10 ns
+
 • memory size : 1 Mb
+
 •	unit price : 122.9 บาท  
+
 https://www.ozdisan.com/entegre-devreler-ics/hafiza-entegreleri/hafiza-entegreleri/IS61LV6416-10KLI-TR  
 
 ###- AT28C256-15PU  
+
 •	memorytype : EEPROM   
+
 •	speed : 150 mHz
+
 • memory size : 256 KB 
-•	unit price : 460.74 บาท  
+
+•	unit price : 460.74 บาท 
+
 https://www.ozdisan.com/entegre-devreler-ics/hafiza-entegreleri/hafiza-entegreleri/AT28C256-15PU
 
 ## - PIC16F72 I/SP
+
 •	memorytype : Flash 
+
 •	speed : 20 mHz
+
 • memory size : 3.5 Mb 
+
 •	unit price : 178.62 บาท  
+
 https://www.robotistan.com/pic16f72-dip28-mikrodenetleyici
 
 ## - EN29LV800BB-70TIP
+
 •	memorytype : Flash 
+
 •	speed : 70 mHz
+
 • memory size : 8 Mb 
+
 •	unit price : 77.37 บาท  
+
 https://www.ozdisan.com/entegre-devreler-ics/hafiza-entegreleri/hafiza-entegreleri/EN29LV800BB-70TIP
 
 # สร้างการทดลองขึ้นมาเอง   
