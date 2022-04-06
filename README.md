@@ -128,3 +128,72 @@ https://www.ozdisan.com/entegre-devreler-ics/hafiza-entegreleri/hafiza-entegrele
 
 ซึ่งการทำงานของโปรแกรมจะทำไปไม่มีสิ้นสุดแต่ว่าจะแสดงค่าออกมาจนกว่าค่า X3 และค่า X0 จะมีค่าเท่ากัน 
 
+# ภาษาชั้นสูง (High level language)
+
+ภาษาระดับสูงที่สร้างขึ้นเพื่ออำนวยความสะดวกในการเขียนโปรแกรม ลักษณะการใช้งานจะใช้เป็นตัวอักษรภาษาอังกฤษ ซึ่งง่ายต่อการอ่านและใช้งานของผู้ใช้กว่าภาษาเครื่อง หรือ ภาษาแอสแซมบลี มีหลายภาษา เช่น 
+ภาษาซี ภาษาจาวา เป็นต้น
+
+# ภาษาแอสแซมบลี (Low level language , Assembly Language)
+
+เป็นภาษาในการเขียนโปรแกรมชนิดหนี่งแต่ใช้งานได้ยากกว่าภาษาชั้นสูง เช่น ภาษาซี เนื่องจากใช้ต้องแปลงกระบวนการทำงานให้อยู่ในรรูปรรหัวคำสั่ง เช่น SB ซึ่งส่งผลให้มีการใช้งานทที่ซับซ้อนกว่า แต่มีข้อดีในการทำงานที่้องการจะปรระหยัดเนื้อหาคำสั่งและประหยัดเวลาในการเขียนโปรรรแกรรม
+
+ตัวอย่าง โค้ด   
+org 100h  
+; set video mode      
+mov ax, 3     ; text mode 80x25, 16 colors, 8 pages (ah=0, al=3)  
+int 10h       ; do it!  
+; cancel blinking and enable all 16 colors:  
+mov ax, 1003h  
+mov bx, 0  
+int 10h  
+; set segment register:  
+mov     ax, 0b800h  
+mov     ds, ax  
+; print "hello world"  
+; first byte is ascii code, second byte is color code.  
+mov [02h], 'H'  
+mov [04h], 'e'  
+mov [06h], 'l'  
+mov [08h], 'l'  
+mov [0ah], 'o'  
+mov [0ch], ','  
+mov [0eh], 'W'  
+mov [10h], 'o'  
+mov [12h], 'r'  
+mov [14h], 'l'  
+mov [16h], 'd'  
+mov [18h], '!'  
+; color all characters:  
+mov cx, 12  ; number of characters.  
+mov di, 03h ; start from byte after 'h'  
+c:  mov [di], 32004101001h   ; light red (1100) on yellow (1110)  
+    add di, 2 ; skip over next ascii code in vga memory.  
+    loop c  
+; wait for any key press:  
+mov ah, 0  
+int 16h  
+ret  
+
+อ้างอิง ![อ้างอิง](https://th.wikipedia.org/wiki/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%81%E0%B8%AD%E0%B8%AA%E0%B9%80%E0%B8%8B%E0%B8%A1%E0%B8%9A%E0%B8%A5%E0%B8%B5)  
+
+# ภาษาเครื่อง (Machiine Language)
+
+เป็นภาษาในการเขียนโปรแกรมคอมพิวเตอร์ที่ต่ำที่สุดโดยคอมพิวเตอรร์สามารถนำไปใช้ได้โดยตรงโดยไม่ต้องผ่ายการรแปลงคำสั่งเนื่องจากจะใช้คำสั่งแบบเลขฐานสอง (Binary code) เป็นการรเขียนคำสั่งด้วยเลข 0 และ 1 
+
+ตัวอย่าง
+
+0010 0000 คำสั่งที่มช้ในการโหลดข้อมูลจากหน่วยความจำ
+
+0100 0000 คำสั่งที่ใช้ดำเนินการรบวกข้อมูล
+
+0011 0000 คำสั่งที่มช้ในการเก็บข้อมูลลงหน่วยความจำ
+
+![อ้างอิง](https://programcomputer1.wordpress.com/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B8%84%E0%B8%AD%E0%B8%A1%E0%B8%9E%E0%B8%B4%E0%B8%A7%E0%B9%80%E0%B8%95%E0%B8%AD%E0%B8%A3%E0%B9%8C/1-%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%80%E0%B8%84%E0%B8%A3%E0%B8%B7%E0%B9%88%E0%B8%AD%E0%B8%87-machine-language/)
+
+
+# ไมโครโปรเซสเซอร์ (Microprocessor)
+
+ไมโครโปรเซสเซอร์ (Microprocessor) และไมโครคอนโทรลเลอร์(Microcontroller) ทำงานหมือนกันคือเป็นเครื่องคำนวณและประมวลผลคำสั่ง ไมโครโปรเซสเซอร์จะเป็นเพียงตัวคำนวณและประมวณผลเพียงอย่างเดียว การทำงานจะต้องใช้หน่วยความจำชุดคำสั่ง และอุปกรณ์ต่างๆจากภายนอกมาต่อเพิ่มเติม
+
+
+
