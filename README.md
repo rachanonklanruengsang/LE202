@@ -174,7 +174,7 @@ mov ah, 0
 int 16h  
 ret  
 
-อ้างอิง ![อ้างอิง](https://th.wikipedia.org/wiki/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%81%E0%B8%AD%E0%B8%AA%E0%B9%80%E0%B8%8B%E0%B8%A1%E0%B8%9A%E0%B8%A5%E0%B8%B5)  
+![อ้างอิง](https://th.wikipedia.org/wiki/%E0%B8%A0%E0%B8%B2%E0%B8%A9%E0%B8%B2%E0%B9%81%E0%B8%AD%E0%B8%AA%E0%B9%80%E0%B8%8B%E0%B8%A1%E0%B8%9A%E0%B8%A5%E0%B8%B5)  
 
 # ภาษาเครื่อง (Machiine Language)
 
